@@ -1,4 +1,6 @@
-# react-native-document-picker
+# rn-document-picker
+
+THE ORIGINAL LIBRARY IS https://github.com/rnmods/react-native-document-picker . this is just fork.
 
 🚧🚧 GH discussions available 🚧🚧
 
