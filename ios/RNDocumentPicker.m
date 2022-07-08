@@ -196,7 +196,8 @@ RCT_EXPORT_METHOD(releaseSecureAccess:(NSArray<NSString *> *)uris
     NSURL *destinationRootDir = [self getDirectoryForFileCopy:copyToDirectory];
     // we don't want to rename the file so we put it into a unique location
     NSString *uniqueSubDirName = [[NSUUID UUID] UUIDString];
-    NSURL *destinationDir = [destinationRootDir URLByAppendingPathComponent:[NSString stringWithFormat:@"%@/", uniqueSubDirName]];
+    // NSURL *destinationDir = [destinationRootDir URLByAppendingPathComponent:[NSString stringWithFormat:@"%@/", uniqueSubDirName]];
+    NSURL *destinationDir = destinationRootDir;
     NSURL *destinationUrl = [destinationDir URLByAppendingPathComponent:[NSString stringWithFormat:@"%@", url.lastPathComponent]];
 
     [NSFileManager.defaultManager createDirectoryAtURL:destinationDir withIntermediateDirectories:YES attributes:nil error:&error];
